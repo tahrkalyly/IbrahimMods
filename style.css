@@ -1,0 +1,210 @@
+/* style.css */
+
+/* الأساسيات */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:system-ui, sans-serif;
+}
+
+body{
+background:#0f1115;
+color:#fff;
+transition:0.3s;
+}
+
+/* الوضع الفاتح */
+body.light{
+background:#f5f6fa;
+color:#111;
+}
+
+/* الهيدر */
+header{
+padding:15px;
+background:#151826;
+position:sticky;
+top:0;
+z-index:10;
+}
+
+body.light header{
+background:#ffffff;
+border-bottom:1px solid #ddd;
+}
+
+.top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+h1{
+font-size:20px;
+}
+
+/* البحث */
+.search{
+margin-top:10px;
+}
+
+.search input{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+outline:none;
+font-size:14px;
+}
+
+/* التطبيقات */
+#apps{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+gap:15px;
+padding:15px;
+}
+
+/* بطاقة التطبيق */
+.app-card{
+background:#1a1d2b;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+body.light .app-card{
+background:#fff;
+color:#111;
+}
+
+.app-card:hover{
+transform:translateY(-5px);
+}
+
+.app-card img.logo{
+width:100%;
+height:180px;
+object-fit:cover;
+background:#ddd;
+}
+
+.content{
+padding:12px;
+}
+
+.name{
+font-size:16px;
+margin-bottom:5px;
+}
+
+.desc{
+font-size:13px;
+opacity:0.8;
+margin-bottom:10px;
+}
+
+/* الإحصائيات */
+.stats{
+display:flex;
+justify-content:space-between;
+font-size:13px;
+margin-bottom:10px;
+opacity:0.9;
+}
+
+/* التقييم */
+.rating button{
+background:none;
+border:none;
+color:#aaa;
+font-size:18px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.rating button:hover{
+color:#ffcc00;
+transform:scale(1.2);
+}
+
+/* زر التحميل */
+.download{
+width:100%;
+padding:10px;
+border:none;
+border-radius:10px;
+background:#4a6cff;
+color:#fff;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
+
+.download:hover{
+background:#3a57d6;
+}
+
+/* نموذج الطلب */
+.request{
+padding:20px;
+background:#151826;
+margin:15px;
+border-radius:15px;
+}
+
+body.light .request{
+background:#fff;
+}
+
+.request input,
+.request textarea{
+width:100%;
+padding:10px;
+margin-top:10px;
+border-radius:10px;
+border:none;
+outline:none;
+font-size:14px;
+}
+
+.request textarea{
+height:100px;
+resize:none;
+}
+
+.request button{
+margin-top:10px;
+width:100%;
+padding:10px;
+border:none;
+border-radius:10px;
+background:#22c55e;
+color:#fff;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* شاشة عدم الاتصال */
+#offline-screen{
+position:fixed;
+inset:0;
+background:#0f1115;
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999;
+text-align:center;
+padding:20px;
+}
+
+.offline-box{
+max-width:300px;
+}
+
+.offline-icon{
+font-size:50px;
+margin-bottom:10px;
+}
